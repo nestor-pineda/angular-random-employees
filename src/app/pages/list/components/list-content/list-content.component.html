@@ -1,0 +1,10 @@
+<p>list-content works!</p>
+<div *ngFor="let item of dataInfo; index as i">
+  <p>
+    <span>{{ item.name.title }}</span> <span>{{ item.name.first }}</span>
+    <span>{{ item.name.second }}</span>
+  </p>
+  <a href="#">{{ item.email }}</a>
+  <img src="{{ item.picture.thumbnail }}" alt="{{ item.name.title }}" />
+  <a routerLink="detail/{{ i }}">more info</a>
+</div>
