@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-content.component.scss'],
 })
 export class ListContentComponent implements OnInit {
-  private URL: string = 'https://randomuser.me/api/?results=50';
+  private URL: string = 'https://randomuser.me/api/?results=500';
   public dataInfo: any = [];
 
   constructor(private employeesService: EmployeesService) {}

@@ -1,0 +1,24 @@
+.viewport {
+  height: 80vh;
+  width: 100vw;
+  background-color: beige;
+  display: flex !important;
+}
+
+.example-item {
+  height: 50px;
+}
+
+.card {
+  min-width: 300px;
+}
+
+.example-header-image {
+  // background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}
+
+.cdk-virtual-scroll-content-wrapper {
+  display: flex !important;
+  justify-content: flex-start;
+}
