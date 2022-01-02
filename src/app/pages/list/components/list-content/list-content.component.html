@@ -1,4 +1,4 @@
-<p>list-content works!</p>
+<!-- <p>list-content works!</p>
 
 <cdk-virtual-scroll-viewport appendOnly itemSize="50" class="viewport">
   <mat-card class="card" *cdkVirtualFor="let item of dataInfo">
@@ -27,7 +27,7 @@
       <button mat-button>SHARE</button>
     </mat-card-actions>
   </mat-card>
-</cdk-virtual-scroll-viewport>
+</cdk-virtual-scroll-viewport> -->
 
 <!-- <cdk-virtual-scroll-viewport appendOnly itemSize="50" class="example-viewport">
   <div *cdkVirtualFor="let item of dataInfo">
@@ -39,3 +39,16 @@
     <img src="{{ item.picture.large }}" alt="{{ item.name.title }}" />
   </div>
 </cdk-virtual-scroll-viewport> -->
+
+<cdk-virtual-scroll-viewport appendOnly itemSize="10" class="viewport">
+  <div class="card" *cdkVirtualFor="let item of dataInfo">
+    <div
+      class="avatar"
+      [style.background-image]="'url(' + item.picture.large + ')'"
+    ></div>
+    <h2 class="name">{{ item.name.first }} {{ item.name.last }}</h2>
+    <h3 class="age">{{ item.dob.age }} years old</h3>
+    <p class="email">{{ item.email }}</p>
+    <p class="phone">{{ item.phone }}</p>
+  </div>
+</cdk-virtual-scroll-viewport>

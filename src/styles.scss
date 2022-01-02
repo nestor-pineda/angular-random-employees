@@ -7,11 +7,12 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: #e0e0e0;
 }
 
 .cdk-virtual-scroll-content-wrapper {
   display: flex !important;
-  justify-content: flex-start;
+  justify-content: space-around;
   flex-wrap: wrap;
-  gap: 20px 20px;
+  gap: 10px;
 }

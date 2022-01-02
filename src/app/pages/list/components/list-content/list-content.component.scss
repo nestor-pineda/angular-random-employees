@@ -1,24 +1,52 @@
 .viewport {
   height: 80vh;
   width: 100vw;
-  background-color: beige;
   display: flex !important;
 }
 
-.example-item {
-  height: 50px;
-}
-
 .card {
-  min-width: 300px;
+  width: 250px;
+  height: 250px;
+  border-radius: 32px;
+  background: #e0e0e0;
+  box-shadow: 5px 5px 9px #cacaca, -5px -5px 9px #f6f6f6;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20px 10px;
+  transition: box-shadow 0.3s ease-in-out;
+  animation: fadeIn 1s ease 0s 1 normal forwards;
+  &:hover {
+    box-shadow: 7px 7px 19px #cacaca, -7px -7px 19px #f6f6f6;
+  }
+  .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    clip-path: circle(50% at 50% 50%);
+    background: #fff center center/cover no-repeat;
+    margin-bottom: 20px;
+  }
 }
 
 .example-header-image {
-  // background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
   background-size: cover;
 }
 
 .cdk-virtual-scroll-content-wrapper {
   display: flex !important;
   justify-content: flex-start;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
