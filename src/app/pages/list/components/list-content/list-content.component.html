@@ -40,7 +40,7 @@
   </div>
 </cdk-virtual-scroll-viewport> -->
 
-<cdk-virtual-scroll-viewport appendOnly itemSize="10" class="viewport">
+<!-- <cdk-virtual-scroll-viewport appendOnly itemSize="10" class="viewport">
   <div class="card" *cdkVirtualFor="let item of dataInfo">
     <div
       class="avatar"
@@ -50,5 +50,23 @@
     <h3 class="age">{{ item.dob.age }} years old</h3>
     <p class="email">{{ item.email }}</p>
     <p class="phone">{{ item.phone }}</p>
+  </div>
+</cdk-virtual-scroll-viewport> -->
+
+<cdk-virtual-scroll-viewport
+  appendOnly
+  itemSize="250"
+  minBufferPx="250"
+  class="viewport"
+>
+  <div class="card" *cdkVirtualFor="let item of dataInfo">
+    <div
+      class="avatar"
+      [style.background-image]="'url(' + item.picture.large + ')'"
+    ></div>
+    <h2 class="name">{{ item.name.first }} {{ item.name.last }}</h2>
+    <h3 class="age">{{ item.dob.age }} years old</h3>
+    <p class="email">{{ item.email }}</p>
+    <p class="phone">{{ item.phone || "Loading..." }}</p>
   </div>
 </cdk-virtual-scroll-viewport>

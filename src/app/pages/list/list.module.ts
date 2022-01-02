@@ -8,6 +8,7 @@ import { EmployeesService } from './services/employees.service';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [ListContentComponent],
@@ -17,6 +18,7 @@ import { MatIconModule } from '@angular/material/icon';
     ScrollingModule,
     MatCardModule,
     MatIconModule,
+    MatGridListModule,
   ],
   providers: [EmployeesService],
 })
